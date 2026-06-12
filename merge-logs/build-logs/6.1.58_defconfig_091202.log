@@ -1,0 +1,18 @@
+make: Entering directory '/home/osaleem/repos/linux-fslc'
+  HOSTCC  scripts/basic/fixdep
+  HOSTCC  scripts/kconfig/conf.o
+  HOSTCC  scripts/kconfig/confdata.o
+  HOSTCC  scripts/kconfig/expr.o
+  LEX     scripts/kconfig/lexer.lex.c
+  YACC    scripts/kconfig/parser.tab.[ch]
+  HOSTCC  scripts/kconfig/lexer.lex.o
+  HOSTCC  scripts/kconfig/menu.o
+  HOSTCC  scripts/kconfig/parser.tab.o
+  HOSTCC  scripts/kconfig/preprocess.o
+  HOSTCC  scripts/kconfig/symbol.o
+  HOSTCC  scripts/kconfig/util.o
+  HOSTLD  scripts/kconfig/conf
+scripts/Kconfig.include:39: C compiler 'arm-linux-gnueabi-gcc' not found
+make[1]: *** [scripts/kconfig/Makefile:94: imx_v6_v7_defconfig] Error 1
+make: *** [Makefile:703: imx_v6_v7_defconfig] Error 2
+make: Leaving directory '/home/osaleem/repos/linux-fslc'

@@ -1,0 +1,43 @@
+2026-06-12 09:05:49,145 [INFO] fslc kernel merge -> v6.1.58  (repo=/home/osaleem/repos/linux-fslc, unity=/home/osaleem/repos/unity-fresh/unity)
+2026-06-12 09:12:01,667 [INFO] [init] starting
+2026-06-12 09:12:02,219 [INFO] [6.1.58 1/1] MERGING: v6.1.58
+2026-06-12 09:12:02,581 [INFO] [6.1.58 1/1] KERNEL BUILD
+2026-06-12 09:12:05,219 [INFO] [6.1.58 1/1] KERNEL BUILD FIX: attempt 1
+2026-06-12 09:12:07,054 [INFO] [6.1.58 1/1]   [agent] list_conflicts 
+2026-06-12 09:12:07,102 [INFO] [6.1.58 1/1]   [agent] run_kernel_build ...
+2026-06-12 09:12:10,389 [INFO] [6.1.58 1/1]   [agent] run_shell ls arch/arm64/configs/ arch/arm/configs/ 2>/dev/null | head -50; echo ---; ls *.config .config 2>/dev/null
+2026-06-12 09:12:10,398 [INFO] [6.1.58 1/1]   [agent] grep KBUILD_DEFCONFIG
+2026-06-12 09:12:17,762 [INFO] [6.1.58 1/1]   [agent] read_file kernel:merge-logs/STATUS
+2026-06-12 09:12:17,764 [INFO] [6.1.58 1/1]   [agent] run_shell cat merge-logs/run_20260612_090549.log | tail -40
+2026-06-12 09:12:21,598 [INFO] [6.1.58 1/1]   [agent] run_shell ls -la; echo ===; git log --oneline -5
+2026-06-12 09:12:26,680 [INFO] [6.1.58 1/1]   [agent] run_shell cat .config 2>/dev/null | head; echo "exit_config=$?"; echo ===; ls scripts/*.sh 2>/dev/null; echo ===; find . -maxdepth
+2026-06-12 09:12:33,221 [INFO] [6.1.58 1/1]   [agent] grep KERNEL_DEFCONFIG|KBUILD_DEFCONFIG|ARCH|defconfig
+2026-06-12 09:12:39,017 [INFO] [6.1.58 1/1]   [agent] run_shell grep -rn "KERNEL_DEFCONFIG\|linux-fslc\|defconfig\|ARCH" meta-unity-bsp/recipes-kernel/ 2>/dev/null | head -40
+2026-06-12 09:12:42,552 [INFO] [6.1.58 1/1]   [agent] read_file unity:meta-unity-bsp/recipes-kernel/linux/linux-fslc_6.1.bb
+2026-06-12 09:12:46,268 [INFO] [6.1.58 1/1]   [agent] run_shell find . -name 'linux-fslc*' 2>/dev/null; echo ===; sed -n '90,160p' meta-unity-bsp/recipes-kernel/linux/linux-unity-imx_6
+2026-06-12 09:13:19,537 [INFO] [6.1.58 1/1]   [agent] read_file unity:meta-freescale/recipes-kernel/linux/linux-fslc_6.1.bb
+2026-06-12 09:13:25,572 [INFO] [6.1.58 1/1]   [agent] run_shell ls -la arch/arm/boot/ 2>/dev/null | head; echo ===cross===; which arm-linux-gnueabihf-gcc aarch64-linux-gnu-gcc gcc 2>/d
+2026-06-12 09:13:30,586 [INFO] [6.1.58 1/1]   [agent] run_shell ls -la merge-logs/; echo ===; find merge-logs -type f | xargs ls -la 2>/dev/null; echo ===prev logs===; ls /home/osaleem
+2026-06-12 09:13:34,063 [INFO] [6.1.58 1/1]   [agent] run_shell echo "=== defconfig 091202 ==="; cat merge-logs/build-logs/6.1.58_defconfig_091202.log; echo; echo "=== defconfig 091207
+2026-06-12 09:13:39,559 [INFO] [6.1.58 1/1]   [agent] grep imx_v6_v7_defconfig|arm-linux-gnueabi|CROSS_COMPILE|TIER|tier_a|defconfig
+2026-06-12 09:13:49,896 [INFO] [6.1.58 1/1]   [agent] run_shell ls /usr/bin/ | grep -E 'gcc|gnueabi|cross' ; echo ===; dpkg -l 2>/dev/null | grep -iE 'gcc-arm|gnueabi|aarch64' | head; 
+2026-06-12 09:13:57,801 [INFO] [6.1.58 1/1]   [agent] run_shell cd /home/osaleem/repos; grep -rn "imx_v6_v7_defconfig\|arm-linux-gnueabi\|CROSS_COMPILE\|defconfig\|tier" kernel_merge_f
+2026-06-12 09:14:04,877 [INFO] [6.1.58 1/1]   [agent] run_shell cd /home/osaleem/repos; sed -n '60,80p' kernel_merge_fslc.py; echo ===; sed -n '770,800p' kernel_merge_fslc.py
+2026-06-12 09:14:13,908 [INFO] [6.1.58 1/1]   [agent] run_shell apt-get install -y gcc-arm-linux-gnueabi 2>&1 | tail -20 || sudo apt-get install -y gcc-arm-linux-gnueabi 2>&1 | tail -2
+2026-06-12 09:14:20,521 [INFO] [6.1.58 1/1]   [agent] run_shell sudo -n apt-get install -y gcc-arm-linux-gnueabi 2>&1 | tail -20; echo "rc=$?"
+2026-06-12 09:14:33,080 [INFO] [6.1.58 1/1]   [agent] run_shell cd /home/osaleem/repos; grep -rn "run_kernel_build\|def kernel_build\|ARCH\|CROSS_COMPILE\|defconfig" unity-ci/*.py 2>/d
+2026-06-12 09:18:37,779 [INFO] [6.1.58 1/1]   [agent] run_shell cd /home/osaleem/repos; grep -n "run_kernel_build\|Tier A\|Tier-A\|imx_v6_v7\|imx_v8\|aarch64\|gnueabi" kernel_merge_fsl
+2026-06-12 09:18:46,447 [INFO] [6.1.58 1/1]   [agent] run_shell find / -name 'arm-linux-gnueabi*gcc*' -o -name 'arm-none-eabi-gcc' 2>/dev/null | head; echo "=== any arm gcc ==="; ls /u
+2026-06-12 09:22:25,164 [INFO] [6.1.58 1/1]   [agent] run_shell cd /home/osaleem/repos/linux-fslc; rm -f .config; make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- defconfig >/tmp/dc.lo
+2026-06-12 09:22:39,563 [INFO] [6.1.58 1/1]   [agent] run_shell cd /home/osaleem/repos/linux-fslc; timeout 600 make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j"$(nproc)" Image modul
+2026-06-12 09:32:42,622 [INFO] [6.1.58 1/1]   [agent] run_shell tail -20 /tmp/kb.log; echo "=== errors ==="; grep -iE 'error:|Error [0-9]|undefined ref' /tmp/kb.log | head
+2026-06-12 09:32:50,425 [INFO] [6.1.58 1/1]   [agent] run_shell cd /home/osaleem/repos; diff kernel_merge_fslc.py unity-fresh/kernel_merge_fslc.py && echo "IDENTICAL"; echo "=== mtimes
+2026-06-12 09:32:59,191 [INFO] [6.1.58 1/1]   [agent] run_shell cd /home/osaleem/repos; grep -n 'zImage\|"Image"\|dtbs' kernel_merge_fslc.py unity-fresh/kernel_merge_fslc.py
+2026-06-12 09:33:18,623 [INFO] [6.1.58 1/1]   [agent] run_shell which clang llvm-objcopy ld.lld 2>/dev/null; clang --version 2>/dev/null | head -2; echo "=== clang targets ==="; clang 
+2026-06-12 09:33:27,686 [INFO] [6.1.58 1/1]   [agent] run_kernel_build ...
+2026-06-12 09:33:37,501 [INFO] [6.1.58 1/1]   [agent] run_shell find / -name '*arm*linux*gnueabi*-gcc*' -o -name 'arm-*-gcc' 2>/dev/null | grep -v gnueabihf | head; echo "=== yocto sys
+2026-06-12 09:36:20,577 [INFO] [6.1.58 1/1]   [agent] run_shell D=/home/osaleem/repos/unity-fresh/unity/build/tmp/work/x86_64-linux/gcc-cross-arm/11.5.0-r0/sysroot-destdir/home/osaleem
+2026-06-12 09:36:27,745 [INFO] [6.1.58 1/1]   [agent] run_shell SR=/home/osaleem/repos/unity-fresh/unity/build/tmp/work/odyssey-poky-linux-gnueabi/linux-unity-imx/6.1.55+gitAUTOINC+569
+2026-06-12 09:36:37,374 [INFO] [6.1.58 1/1]   [agent] run_shell B=/home/osaleem/repos/unity-fresh/unity/build/tmp/work/odyssey-poky-linux-gnueabi/linux-unity-imx/6.1.55+gitAUTOINC+569b
+2026-06-12 09:36:45,536 [INFO] [6.1.58 1/1]   [agent] run_shell cd /home/osaleem/repos/linux-fslc; rm -f .config; echo "cleaned"; echo "=== quick freestanding test ==="; echo 'int f(){
+2026-06-12 09:36:47,268 [INFO] [6.1.58 1/1]   [agent] run_kernel_build ...

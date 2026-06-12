@@ -1,0 +1,9 @@
+make: Entering directory '/home/osaleem/repos/linux-fslc'
+***
+*** Configuration file ".config" not found!
+***
+*** Please run some configurator (e.g. "make oldconfig" or
+*** "make menuconfig" or "make xconfig").
+***
+make: *** [Makefile:790: .config] Error 1
+make: Leaving directory '/home/osaleem/repos/linux-fslc'

@@ -1,0 +1,13 @@
+KERNEL MERGE — fslc 6.1.57 -> 6.1.58
+============================================================
+Phase:        KERNEL BUILD FIX  (agent: run_kernel_build ...)
+Version:      6.1.58   (step 1/1)
+Elapsed:      24m45s total | 24m45s this step
+ETA:          —
+------------------------------------------------------------
+Retries:      kernel 1 | unity 0 | agent escalations 1
+Cost:         $22.35  (1.42M in / 0.01M out)
+Last error:   (none)
+------------------------------------------------------------
+Recent:
+  v6.1.58  ...     0s

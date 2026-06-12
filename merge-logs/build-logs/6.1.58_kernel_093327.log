@@ -1,0 +1,9 @@
+make: Entering directory '/home/osaleem/repos/linux-fslc'
+  SYNC    include/config/auto.conf.cmd
+scripts/Kconfig.include:39: C compiler 'arm-linux-gnueabi-gcc' not found
+make[2]: *** [scripts/kconfig/Makefile:77: syncconfig] Error 1
+make[1]: *** [Makefile:703: syncconfig] Error 2
+make: *** [Makefile:804: include/config/auto.conf.cmd] Error 2
+make: *** [include/config/auto.conf.cmd] Deleting file 'include/generated/rustc_cfg'
+make: *** [include/config/auto.conf.cmd] Deleting file 'include/generated/autoconf.h'
+make: Leaving directory '/home/osaleem/repos/linux-fslc'

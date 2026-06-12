@@ -1,0 +1,3 @@
+2026-06-12 09:05:00,249 [INFO] fslc kernel merge -> v6.1.58  (repo=/home/osaleem/repos/linux-fslc, unity=/home/osaleem/repos/unity-fresh/unity)
+2026-06-12 09:05:00,281 [WARNING] Could not fetch 'stable'. Add it: git remote add stable https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
+2026-06-12 09:05:00,285 [ERROR] tag v6.1.58 not found (run: git fetch stable --tags)
